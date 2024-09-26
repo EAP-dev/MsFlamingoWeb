@@ -275,7 +275,7 @@ if($_POST)
     $mail->SMTPAuth   = true;                                    //ENABLE SMTP AUTHENTICATION
     $mail->Username   = 'enrico.petrarolo@gmail.com';                //SMTP username
     $mail->Password   = 'qhtjikyvpapxshxu';                   //SMTP password
-    $mail->SMTPSecure = 'tls';          //ENABLE TLS ENCRYPTION; `PHPMAILER::ENCRYPTION_SMTPS` ALSO ACCEPTED
+    $mail->SMTPSecure = 'ssl';          //ENABLE TLS ENCRYPTION; `PHPMAILER::ENCRYPTION_SMTPS` ALSO ACCEPTED
     $mail->Port       = 465;                                     //TCP PORT TO CONNECT TO 465 587
 
     //Recipients
