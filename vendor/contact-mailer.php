@@ -282,7 +282,7 @@ if($_POST)
     //Recipients
     $mail->setFrom($user_Email,$user_Name);
     $mail->addAddress($your_email, 'MsFlamingo');     // Add a recipient
-    $mail->addReplyTo($your_email, 'Information');
+    $mail->addReplyTo($your_email, 'reply MsFlamingo');
 
 
     // Content
