@@ -269,19 +269,18 @@ if($_POST)
 
 
 
-    //SERVER SETTINGS
-    $mail->SMTPDebug = 4;                                         // Enable verbose debug output
-    $mail->isSMTP();                                             //SEND USING SMTP
-    $mail->Host       = 'smtp.gmail.com';                        //SET THE SMTP SERVER TO SEND THROUGH/    
-    $mail->SMTPAuth   = true;                                    //ENABLE SMTP AUTHENTICATION
-    $mail->Username   = 'enrico.petrarolo@gmail.com';                //SMTP username
-    $mail->Password   = 'qhtjikyvpapxshxu';                   //SMTP password
-    $mail->SMTPSecure = 'tls';          //ENABLE TLS ENCRYPTION; `PHPMAILER::ENCRYPTION_SMTPS` ALSO ACCEPTED
-    $mail->Port       = 587;                                     //TCP PORT TO CONNECT TO 465 587
+    //Server settings
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'enrico.petrarolo@gmail.com';                     // SMTP username
+    $mail->Password   = 'wbumzbxjnxvgxocr';                         // SMTP password
+    $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom($user_Email,$user_Name);
-    $mail->addAddress($your_email, 'MsFlamingo');     // Add a recipient
+    $mail->addAddress($your_email, 'Theme Industry');     // Add a recipient
     $mail->addReplyTo($your_email, 'Information');
 
 
@@ -315,8 +314,8 @@ if($_POST)
     if(isset($_POST["projectType"])) {
         $mail->Body .= "<strong>Project Type: </strong>" . $pro_type . "<br>";
     }
-    if(isset($_POST["quote_Surname"])) {
-        $mail->Body .= "<strong>Budget: </strong>" . $surname . "<br>";
+    if(isset($_POST["quoteBudget"])) {
+        $mail->Body .= "<strong>Budget: </strong>" . $budget . "<br>";
     }
     //Directory listing
     if(isset($_POST["propertyId"])) {
