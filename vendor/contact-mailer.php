@@ -270,6 +270,7 @@ if($_POST)
 
 
     //SERVER SETTINGS
+    $mail->SMTPDebug = 4; 
     $mail->isSMTP();                                             //SEND USING SMTP
     $mail->Host       = 'smtp.gmail.com';                        //SET THE SMTP SERVER TO SEND THROUGH/    
     $mail->SMTPAuth   = true;                                    //ENABLE SMTP AUTHENTICATION
