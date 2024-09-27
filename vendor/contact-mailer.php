@@ -4,6 +4,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 
+
 if($_POST)
 {
 
@@ -14,7 +15,7 @@ if($_POST)
 
     $mail = new PHPMailer();
 
-    $your_email = "enrico.petrarolo@gmail.com";
+    $your_email = "contact@msflamingo.biz";
 
 
     //check if its an ajax request, exit if not
@@ -271,12 +272,12 @@ if($_POST)
 
     //Server settings
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'smtp.strato.de';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'enrico.petrarolo@gmail.com';                     // SMTP username
-    $mail->Password   = 'wbumzbxjnxvgxocr';                         // SMTP password
+    $mail->Username   = 'contact@msflamingo.biz';                     // SMTP username
+    $mail->Password   = 'FlyHigh1978InTheSky';                         // SMTP password
     $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom($user_Email,$user_Name);

@@ -1,5 +1,6 @@
 //contact us form
 $(".contact_btn").on('click', function () {
+    
     //disable submit button on click
     // $(".contact_btn").attr("disabled", "disabled");
     // $(".contact_btn b").text('Sending');
@@ -9,7 +10,7 @@ $(".contact_btn").on('click', function () {
     var post_data, output;
     var proceed = "true";
     // var allBlank;
-
+    
     var str = $('#contact-form-data').serializeArray();
 
     $('#contact-form-data input').each(function() {
@@ -21,15 +22,15 @@ $(".contact_btn").on('click', function () {
 
     //everything looks good! proceed...
     if (proceed === "true") {
-
+            
         var pathArray = window.location.pathname.split('/');
         var secondLevelLocation = pathArray[3];
 
         var accessURL;
         if(secondLevelLocation){
-            accessURL="../vendor/contact-mailer.php";
+            accessURL="../contact-mailer.php";
         }else{
-            accessURL="vendor/contact-mailer.php";
+            accessURL="../contact-mailer.php";
         }
         //data to be sent to server
         $.ajax({
@@ -49,7 +50,7 @@ $(".contact_btn").on('click', function () {
                 }
 
                 if ($("#result").length) {
-                    // alert("yes");
+                     //alert("yes");
                     $("#result").hide().html(output).slideDown();
                     $(".contact_btn i").addClass('d-none');
                 }else{
@@ -75,7 +76,7 @@ $(".contact_btn").on('click', function () {
             error: function () {
                 alert("Failer");
             }
-        });
+        }); 
 
     }
     else
